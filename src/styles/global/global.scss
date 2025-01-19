@@ -1,0 +1,171 @@
+:root {
+  --base-gray: #333333;
+  --light-gray: #8d8d8d;
+  --light-gray-2: #dddddd;
+  --light-gray-3: #e8e8e8;
+  --light-gray-4: #f4f4f4;
+  --base-red: #e11c4b;
+  --white: #ffffff;
+  --promo-cart-shadow: rgba(32, 32, 32, 0.1);
+  --sticky-menu-shadow: rgba(146, 146, 146, 0.25);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.5208335vw;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  scroll-behavior: smooth;
+
+  @media (max-width: 767px) {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: calc((100 / 320) * 5vw);
+    -webkit-text-size-adjust: none;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  color: var(--base-gray);
+  background-color: var(--white);
+
+  @media (max-width: 767px) {
+    -webkit-text-size-adjust: none;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 4.75rem;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
+
+input,
+textarea {
+  line-height: inherit;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+a {
+  color: unset;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a,
+svg {
+  display: block;
+}
+
+button,
+input,
+a,
+textarea {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  background-color: transparent;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    padding: 0 2rem;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: 182rem;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 115rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden {
+  @media (max-width: 767px) {
+    overflow: hidden;
+  }
+}

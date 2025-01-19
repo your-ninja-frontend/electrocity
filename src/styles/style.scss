@@ -1,0 +1,23 @@
+// FONTS
+@use './fonts/fonts';
+
+// LIBS
+@use './libs/slick';
+
+// GLOBAL
+@use './global/global';
+
+// COMPONENTS
+@use '../components/Header/header';
+@use '../components/TopMenu/top-menu';
+@use '../components/Logo/logo';
+@use '../components/UserMenu/user-menu';
+@use '../components/Search/search';
+@use '../components/AsideMenu/aside-menu';
+@use '../components/CategoryMenu/category-menu';
+@use '../components/AllPromo/all-promo';
+@use '../components/Footer/footer';
+@use '../components/FooterMenu/footer-menu';
+@use '../components/Contacts/contacts';
+@use '../components/Social/social';
+@use '../components/StickyMenu/sticky-menu';

@@ -1,0 +1,141 @@
+.aside-menu {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.aside-menu__button--open::after,
+.aside-menu__button--open::before,
+.aside-menu__button-line {
+  display: block;
+  width: 4.8rem;
+  height: 0.434rem;
+  background-color: var(--light-gray);
+  transition: all 0.3s linear;
+}
+
+.aside-menu__button--open {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &::after,
+  &::before {
+    content: '';
+  }
+
+  &:hover {
+    &::after,
+    &::before,
+    & .aside-menu__button-line {
+      background-color: var(--base-red);
+    }
+  }
+}
+
+.aside-menu__button--close {
+  position: absolute;
+  top: 3.6rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4.6rem;
+  height: 4.6rem;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 6rem;
+    height: 0.4rem;
+    background-color: var(--light-gray);
+    transition: all 0.3s linear;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: var(--base-red);
+    }
+  }
+}
+
+.aside-menu__wrapper {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 101vh;
+  padding-top: 9.6rem;
+  background-color: var(--white);
+  overflow: auto;
+}
+
+.aside-menu__title {
+  margin-bottom: 3.6rem;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  font-weight: 700;
+}
+
+.aside-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.aside-menu__item {
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: 1.6rem;
+    background-color: var(--light-gray-3);
+  }
+}
+
+.aside-menu__link,
+.aside-menu__link-icon {
+  transition: all 0.3s linear;
+}
+
+.aside-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  &:hover {
+    color: var(--base-red);
+
+    & .aside-menu__link-icon {
+      fill: var(--base-red);
+    }
+  }
+}
+
+.aside-menu__link-img {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.aside-menu__link-icon {
+  width: 1.6rem;
+  height: 3.2rem;
+  margin-left: auto;
+  fill: var(--light-gray);
+}

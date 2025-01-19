@@ -1,0 +1,15 @@
+.logo__icon {
+  width: 29.8rem;
+  height: 4.2rem;
+  fill: var(--base-red);
+
+  @media (min-width: 768px) {
+    width: 39.25rem;
+    height: 5.5rem;
+  }
+
+  @media (min-width: 1920px) {
+    width: 18.8rem;
+    height: 2.7rem;
+  }
+}

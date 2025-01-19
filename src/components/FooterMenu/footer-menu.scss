@@ -1,0 +1,28 @@
+.footer-menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    gap: 6rem;
+  }
+
+  @media (min-width: 1920px) {
+    gap: 6.2rem;
+  }
+}
+
+.footer-menu__link {
+  transition: all 0.3s linear;
+
+  &:hover {
+    color: var(--base-red);
+  }
+
+  @media (max-width: 767px) {
+    font-size: 2.8rem;
+    line-height: 4.4rem;
+  }
+}
